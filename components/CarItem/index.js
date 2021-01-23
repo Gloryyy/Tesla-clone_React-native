@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, ImageBackground } from "react-native";
+import StyledButton from "../StyledButton";
 import styles from "./styles";
 
 const CarItem = () => {
@@ -13,6 +14,21 @@ const CarItem = () => {
         <Text style={styles.title}>Model S</Text>
         <Text style={styles.subtitle}>Starting at $69,420</Text>
       </View>
+
+      <StyledButton
+        type="primary"
+        content={"Custom Order"}
+        onPress={() => {
+          console.warn("Custom Order was clicked");
+        }}
+      />
+      <StyledButton
+        type="secondary"
+        content={"Existing Inventory"}
+        onPress={() => {
+          console.warn("Existing Inventory was clicked");
+        }}
+      />
     </View>
   );
 };
